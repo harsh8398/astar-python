@@ -18,7 +18,7 @@ rows = height // pixel
 cols = width // pixel
 
 # show open and closed list
-showoc = False
+showoc = True
 
 # walls 0 <= x < 1
 walldensity = 0.3
@@ -63,7 +63,7 @@ class Node(object):
                           self.y,
                           **kwargs)
 
-        
+
     def addNeighbors(self):
         i = self.i
         j = self.j
@@ -114,7 +114,7 @@ def get_run(event):
 
             # backtrack path from current node
             Astar.backtrack()
-            
+
             if ret:
                 break
 
